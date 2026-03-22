@@ -115,7 +115,9 @@ header .nav-link{
 header .nav-link:hover{
     color: var(--theme-color) !important;
 }
-header .nav-link.active{
+header .nav-link.active,
+header .navbar-nav .nav-item .active, 
+header .navbar-nav .nav-item .show{
     color: var(--theme-color) !important;
 }
 header .btn-link{
@@ -212,6 +214,54 @@ header .btn-link:hover{
     padding: 12px 40px;
     border-radius: 100px;
     text-decoration: none;
+}
+
+.inner-banner{
+    min-height: 55vh;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.inner-banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        35deg,
+        #073b82 0%,
+        #1f6bc5 40%,
+        rgba(31, 107, 197, 0.6) 50%,
+        rgba(31, 107, 197, 0.3) 60%,
+        rgba(31, 107, 197, 0.1) 70%,
+        transparent 85%
+      ) border-box !important;
+    opacity: 1;
+}
+.inner-banner h1{
+    font-size: 46px;
+    color: #fff;
+    font-weight: 900;
+    position: relative;
+    z-index: 9;
+}
+
+.inner-heading{
+    font-size: 26px;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.equipment-table td, .equipment-table th{
+    padding: 15px 20px;
+}
+.inner-footer{
+    border-top: 1px solid #dee2e6;
 }
 
 /* SECTION BASE */
@@ -428,15 +478,21 @@ section {
     opacity: 1 !important;
     font-size: 24px !important;
 }
-.slick-prev:before{
+.slick-prev:before{}
 
 @media (max-width: 767px) {
+    header{
+        padding: 10px 0 0 0;
+    }
     .navbar-toggler{
         border: none !important;
         box-shadow: none !important;
+        background: #262626;
+        padding: 6px 6px;
+        border-radius: 0px;
     }
     header .navbar-nav{
-        background-color: #000;
+        /* background-color: #000; */
     }
     .hero-section{
         padding-top: 70px;
