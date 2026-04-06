@@ -61,7 +61,10 @@ body {
     background-color: #f9f9fb !important;
 }
 .bg-light-blue{
-    background-color: rgb(219, 236, 255, 0.7) !important;
+    background-color: rgb(219, 236, 255, 0.5) !important;
+}
+.bg-light-yellow{
+    background-color: rgb(255 244 219 / 50%) !important;
 }
 .text-theme{
     color: var(--theme-color);
@@ -90,6 +93,21 @@ body {
 .z-index-1{
     z-index: 1;
     position: relative;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+.font-weight-700{
+    font-weight: 700;
+}
+.font-weight-500{
+    font-weight: 500;
+}
+.font-weight-400{
+    font-weight: 400;
+}
+.font-weight-300{
+    font-weight: 300;
 }
 .h3, h3{
     font-size: 22px;
@@ -387,6 +405,19 @@ section {
     color: var(--theme-color);
 }
 
+.about-stats .stats-card {
+    padding: 35px 0px;
+    border-radius: 24px;
+}
+.about-stats .stats-card .stat-label {
+    font-size: 18px;
+}
+.about-stats .stats-card .stat-value {
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
 /* WHY CHOOSE US */
 .why-item {
     text-align: center;
@@ -430,6 +461,62 @@ section {
     font-weight: 400;
 }
 
+.contact-us-section .contact-info h5{
+    font-size: 20px;
+    font-weight: 700;
+}
+.contact-us-section .contact-info p{
+    font-size: 16px;
+    color: #000;
+    line-height: 1.6;
+    font-weight: 400;
+}
+.contact-us-section .contact-info p a{
+    color: #000;
+}
+
+.products-listing{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+.product-item{
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    padding: 10px;
+    text-align: center;
+}
+.product-image{
+    width: 100%;
+}
+.product-image img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.product-content{
+    padding: 20px 15px;
+}
+
+.product-content h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product-content a{
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: linear-gradient(45deg, #073b82, #1f6bc5) border-box !important;
+    color: #fff !important;
+}
+
+.product-content a:hover{
+    background: linear-gradient(45deg, #073b82, #1f6bc5) border-box !important;
+    color: #fff !important;
+}
 
 /* FOOTER */
 .footer {
@@ -520,6 +607,10 @@ section {
         width: 60px;
         height: 60px;
         font-size: 24px;
+    }
+
+    .products-listing{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     .footer{
         padding-top: 50px;
